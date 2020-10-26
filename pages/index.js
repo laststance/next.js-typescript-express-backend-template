@@ -1,7 +1,14 @@
 import Head from 'next/head'
+import axios from 'axios'
 import styles from '../styles/Home.module.css'
+import { useEffect } from 'react'
 
 export default function Home() {
+  useEffect(async() => {
+    const res = axios
+  })
+
+
   return (
     <div className={styles.container}>
       <Head>
