@@ -1,11 +1,14 @@
 import Head from 'next/head'
 import axios from 'axios'
 import styles from '../styles/Home.module.css'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function Home() {
+  const [msg, setMsg] = useState()
+
   useEffect(async() => {
-    const res = axios
+    const res = await axios.get('http://localhost:4000/')
+    setMsg(res.data.msg)
   })
 
 
@@ -18,7 +21,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          {msg ? msg : 'Loading...'}
         </h1>
 
         <p className={styles.description}>
