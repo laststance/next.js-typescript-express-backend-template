@@ -6,8 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "server-build": "tsc -p tsconfig.server.json",
-    "server-start": "nodemon --ext ts,js,graphql --watch './backend' --ignore './src' --exec ts-node --project tsconfig.server.json ./backend/server.ts"
+    "server-build": "tsc -p tsconfig.backend.json",
+    "server-start": "nodemon --ext ts,js,graphql --watch './backend' --ignore './src' --exec ts-node --project tsconfig.backend.json ./backend/server.ts"
   },
   "dependencies": {
     "axios": "^0.21.0",

@@ -1,13 +1,13 @@
 import Express, { Request, Response } from 'express'
 import cors from 'cors'
 
-const ts = Express()
-ts.use(cors())
+const express = Express()
+express.use(cors())
 
-ts.get('/', (req: Request, res: Response) => {
-  const msg = 'This is CORS-enabled for an allowed domain. ' + (new Date()).toLocaleTimeString()
+express.get('/', (req: Request, res: Response) => {
+  const msg = 'This message came from Express server'
   console.log(msg)
   res.json({ msg: msg })
 })
 
-export default ts
+export default express
