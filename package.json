@@ -10,7 +10,7 @@
     "server-start": "nodemon --ext ts,js,graphql --watch './backend' --ignore './src' --exec ts-node --project tsconfig.backend.json ./backend/server.ts"
   },
   "dependencies": {
-    "axios": "^0.21.0",
+    "axios": "^0.21.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "next": "10.0.3",
